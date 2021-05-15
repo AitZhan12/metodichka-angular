@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static('./dist/metodichka-angular'));
+app.use(express.static(path.join(__dirname, '.dist/angularclient')));
 
 app.get('/*', (req, res) =>
-  res.sendFile('index.html', {root: 'dist/metodichka-angular'}),
+  res.sendFile('index.html', {root: '.dist/metodichka-angular'}),
   );
 
 app.listen(process.env.PORT || 8080);
