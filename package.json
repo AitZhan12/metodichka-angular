@@ -39,7 +39,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --prod",
+    "postinstall": "ng build"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",
