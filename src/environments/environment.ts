@@ -7,6 +7,5 @@ export const environment = {
   production: false,
   tokenPrefix: 'Bearer ',
   apiUrl: 'http://localhost:8080',
-  apiRootUrl: 'https://adisteme-back.herokuapp.com/',
   tokenKey: 'token'
 };
