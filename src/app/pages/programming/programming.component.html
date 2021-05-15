@@ -1,0 +1,47 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link
+    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+    rel="stylesheet"  type='text/css'>
+</head>
+
+<div class="col-12">
+  <div class="w3-panel w3-blue w3-round-xlarge">
+    <div class="card-body">
+      <h5 class="card-title">Бағдарламалау</h5>
+      <div><a routerLink="/create" class="btn btn-primary pull-right" *ngIf="getRole()">Қосу</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="card my-5">
+  <div class="card-body">
+    <table class="table table-bordered table-striped">
+      <thead class="thead-dark">
+      <tr>
+        <th scope="col">Тақырып</th>
+        <th scope="col">Қосымша сілтеме</th>
+        <th scope="col">Мектеп курсы</th>
+        <th scope="col">Тақырыпқа өту</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let topic of topicsDto" class="success">
+        <td align="center">{{ topic.description }}</td>
+        <td align="center"><a href="mailto:{{ topic.link }}">{{ topic.link }}</a></td>
+        <td align="center">Иә
+        </td>
+        <td align="center"><a  class="btn btn-info" role="button"
+        style="cursor:pointer;" (click)="openModal(topic)">
+          <span class="fa-stack">
+            <i class="fa fa-square fa-stack-2x"> </i>
+            <i class="fa fa-sign-in fa-stack-1x fa-inverse" ></i>
+          </span>
+        </a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

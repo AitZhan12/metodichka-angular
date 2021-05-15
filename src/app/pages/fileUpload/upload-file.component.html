@@ -1,0 +1,57 @@
+<form (ngSubmit)="upload()" style="padding-top: 10px">
+  <div *ngIf="currentFile" class="progress">
+    <div class="progress-bar progress-bar-info progress-bar-striped"
+         role="progressbar"
+         attr.aria-valuenow="{{progress}}"
+         aria-valuemin="0"
+         aria-valuemax="100"
+         [ngStyle]="{width: progress + '%'}">
+      {{progress}}%
+    </div>
+  </div>
+
+
+  <label class="btn btn-default">
+    <input type="file" (change)="selectedFile($event)"/>
+  </label>
+
+  <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">
+    Жүктеу
+  </button>
+</form>
+
+<!--<div class="card">-->
+<!--  <div class="card-header">List of files</div>-->
+<!--  <ul class="list-group list-group-flush"-->
+<!--  *ngFor="let file of fileInfos | async">-->
+<!--    <li class="list-group-item">-->
+<!--      <a href="{{file.url}}">{{file.name}}</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Жүктелген файлдар тізімі</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Файл</th>
+        <th>Өшіру</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let file of fileInfos | async">
+        <td>{{file.id}}</td>
+        <td><a href="{{file.url}}">{{file.name}}</a></td>
+        <td>
+          <button (click)="deleteFile(file.id)" class="btn btn-danger">Delete</button>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

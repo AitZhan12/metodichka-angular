@@ -1,3 +1,31 @@
-<p>
-  login works!
-</p>
+<div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card m-2">
+        <div class="card-body">
+          <form [formGroup]="loginForm">
+            <div class="form-group">
+              <label>Логин</label>
+              <input type="text" formControlName="login" class="form-control" placeholder="Enter login">
+            </div>
+            <div class="form-group">
+              <label>Пароль</label>
+              <input type="password" formControlName="password" placeholder="Enter password:" class="form-control">
+            </div>
+            <div class="form-group">
+              <button [disabled]="!loginForm.valid" (click)="login()" type="submit" class="btn btn-block btn-success">
+                Login <span class="fa fa-sign-in"></span>
+              </button>
+              <button routerLink="/register" type="button" class="btn btn-block btn-primary">
+                Rgister <span class="fa fa-registered"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,41 @@
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="name">Тақырып</label>
+        <input type="text" [(ngModel)]="topic.description"
+               class="form-control"
+               id="name"
+               name="topic.description"
+               placeholder="Тақырыпты жазыңыз"
+               required #name="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="thesis">Тақырып мәтні</label>
+        <textarea class="form-control" name="message" id="thesis" [(ngModel)]="topic.thesis" cols="30" rows="10" ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="ssl">Қосымша сілтеме</label>
+        <input type="text" [(ngModel)]="topic.link"
+               name="topic.link"
+               class="form-control"
+               id="ssl"
+               placeholder="сілтеме"
+               required #link="ngModel">
+      </div>
+
+      <div class="form-group col-md-12">
+        <label class="col-md-6 control-label" for="Platform">Категорияны таңдаңыз<span style="color:red">*</span></label>
+        <div class="col-md-3" style="margin-left: -26px">
+          <select id="Platform" class="form-control" [(ngModel)]="topic.category" name="topic.category">
+            <option *ngFor="let p of categories" [ngValue]=p.ID>{{p.name}}</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!userForm.form.valid"
+              class="btn btn-info">Кітап қосу</button>
+    </form>
+  </div>
+</div>
