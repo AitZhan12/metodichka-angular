@@ -3,10 +3,9 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'metodichka-angular/dist/demo')));
+app.use(express.static(__dirname + '/dist/metodichka-angular'));
 
 app.get('/*', (req, res) =>
-  res.sendFile('index.html', {root: '.dist/demo'}),
-  );
+  res.sendFile(path.join(__dirname + '/dist/metodichka-angular/index.html')));
 
 app.listen(process.env.PORT || 8080);
