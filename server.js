@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '.dist/angularclient')));
+app.use(express.static(path.join(__dirname, '.dist/metodichka-angular')));
 
 app.get('/*', (req, res) =>
   res.sendFile('index.html', {root: '.dist/metodichka-angular'}),
