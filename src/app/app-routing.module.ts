@@ -16,8 +16,7 @@ import {Role} from './_models/Role';
 import {RegisterComponent} from './rgister/register.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/informatics', pathMatch: 'full',
-    canActivate: [AuthGuard]},
+  { path: '', redirectTo: '/informatics', pathMatch: 'full' },
   { path: 'informatics', component: InformaticsComponent },
   { path: 'addBook', component: UploadFileComponent},
   { path: 'engineering', component: EngineeringComponent},
@@ -34,7 +33,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes,
-    {useHash: true}) ],
+    { useHash: true, relativeLinkResolution: 'legacy' }) ],
   exports: [ RouterModule ],
   entryComponents: [ModalProgrammingComponent]
 })
