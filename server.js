@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 app.use(express.static(__dirname + '/dist'));
-app.listen(process.env.PORT || 8080);
+const PORT = app.listen(process.env.PORT || 8080);
 // app.get('/*', function (req, res) {
 //   res.sendFile(`./metodichka-angular/dist/index.html`); });
 
@@ -15,4 +15,5 @@ app.get('', function(req, res) {
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'src', 'index.html'));
 });
-console.log('console listening')
+app.listen(PORT, () => console.log(`Server is listening on port ${PORT}...`));
+

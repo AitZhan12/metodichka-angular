@@ -37,13 +37,13 @@
   },
   "scripts": {
     "ng": "ng",
-    "heroku-postbuild": "ng build --prod",
+    "heroku-postbuild": "ng build --configuration production",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot --prod"
+    "postinstall": "ng build --aot --configuration production"
   },
   "devDependencies": {
     "@angular/language-service": "~12.0.0",
