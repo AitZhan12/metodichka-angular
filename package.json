@@ -37,9 +37,9 @@
   },
   "scripts": {
     "ng": "ng",
-    "heroku-postbuild": "ng build --prod && npm install -g http-server-spa",
-    "start": "http-server-spa dist/metodichka-angular index.html $PORT",
-    "build": "ng build",
+    "heroku-postbuild": "ng build --prod",
+    "start": "node server.js",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
