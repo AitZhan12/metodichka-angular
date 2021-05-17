@@ -9,7 +9,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(requireHTTPS);
+//app.use(requireHTTPS);
 
 app.use(express.static(`./dist/metodichka-angular`));
 const PORT = app.listen(process.env.PORT || 3000);
