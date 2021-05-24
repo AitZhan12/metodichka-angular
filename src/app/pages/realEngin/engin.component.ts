@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+
 import {ModalProgrammingComponent} from '../modal/modal-programming.component';
 import {TopicsService} from '../../services/topics-service';
-import {MatDialog} from '@angular/material';
 import {TopicsDto} from '../topics/topicsDto';
 import {AuthenticationService} from '../../services/authentication.service';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   templateUrl: './engin.component.html'

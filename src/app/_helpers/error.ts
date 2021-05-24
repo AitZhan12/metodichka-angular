@@ -1,11 +1,13 @@
-import {Injectable} from '@angular/core';
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 
-import {catchError} from 'rxjs/operators';
+
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../services/authentication.service';
+import {Injectable} from '@angular/core';
+import {HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs/internal/Observable';
+import {catchError} from 'rxjs/operators';
 import {throwError} from 'rxjs/internal/observable/throwError';
+
 
 
 @Injectable()

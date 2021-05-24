@@ -1,9 +1,12 @@
-import {Component, OnInit} from '@angular/core';
+
 import {UserService} from '../services/user.service';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {first} from 'rxjs/operators';
+
+
 import {Router} from '@angular/router';
 import {User} from '../_models/User';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder} from '@angular/forms';
+import {first} from 'rxjs/operators';
 
 @Component({
   templateUrl: 'register.component.html'

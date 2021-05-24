@@ -1,7 +1,8 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+
 import {TopicsService} from '../../services/topics-service';
 import {TopicsDto} from '../topics/topicsDto';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   templateUrl: './modal-programming.component.html',
@@ -84,7 +85,7 @@ export class ModalProgrammingComponent implements OnInit {
 
   downloadPdf(id: number) {
     this.topicService.download(this.data.category, id).subscribe(data => {
-      const blob = new Blob([data], {type: 'application/pdf'});
+      const blob = new Blob([data], {type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
       const url = window.URL.createObjectURL(blob);
       window.open(url);
     });

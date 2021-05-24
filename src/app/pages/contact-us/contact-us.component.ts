@@ -1,9 +1,12 @@
-import {Component} from '@angular/core';
+// @ts-ignore
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   templateUrl: './contact-us.component.html',
   styleUrls: ['contact-us.component.css']
 })
-export class ContactUsComponent {
-
+export class ContactUsComponent implements OnInit {
+ngOnInit() {
+}
 }

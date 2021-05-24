@@ -1,19 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {InformaticsComponent} from './pages/informatics/informatics.component';
 import {AppMaterialModule} from './shared/app-material.module';
-import {MatDialogModule, MatDialogRef, MatListModule} from '@angular/material';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {UploadFileComponent} from './pages/fileUpload/upload-file.component';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {UploadFile} from './services/upload-file.service';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {EngineeringComponent} from './pages/engineering/engineering.component';
 import {ProgrammingComponent} from './pages/programming/programming.component';
 import {StemServiceService} from './services/stem-service.service';
@@ -29,6 +21,13 @@ import {AdminComponent} from './admin/admin.component';
 import {TokenInterceptor} from './_helpers/token';
 import {ErrorInterceptor} from './_helpers/error';
 import {RegisterComponent} from './rgister/register.component';
+import {MatListModule} from '@angular/material/list';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 
 @NgModule({

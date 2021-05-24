@@ -1,5 +1,4 @@
 import {RouterModule, Routes} from '@angular/router';
-import {NgModule} from '@angular/core';
 import {InformaticsComponent} from './pages/informatics/informatics.component';
 import {UploadFileComponent} from './pages/fileUpload/upload-file.component';
 import {EngineeringComponent} from './pages/engineering/engineering.component';
@@ -14,6 +13,7 @@ import {LoginComponent} from './login/login.component';
 import {AuthGuard} from './_helpers/auth.guard';
 import {Role} from './_models/Role';
 import {RegisterComponent} from './rgister/register.component';
+import {NgModule} from '@angular/core';
 
 const routes: Routes = [
   { path: '', redirectTo: '/informatics', pathMatch: 'full' },

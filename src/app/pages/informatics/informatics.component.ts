@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+
 import {animate, style, transition, trigger} from '@angular/animations';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   templateUrl: './informatics.component.html',
@@ -19,7 +20,6 @@ export class InformaticsComponent implements OnInit {
   current = 0;
   img_list = [
     '../../../assets/imgs/1.png',
-    '../../../assets/imgs/4.jpg',
     '../../../assets/imgs/2.jpg',
     '../../../assets/imgs/5.png',
     '../../../assets/imgs/3.jpg',

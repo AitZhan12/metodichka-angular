@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+
 import {TopicsDto} from '../topics/topicsDto';
 import {TopicsService} from '../../services/topics-service';
-import {MatDialog} from '@angular/material';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   templateUrl: './download-page.component.html',

@@ -1,8 +1,9 @@
+
+import {Books} from '../pages/fileUpload/books';
+import {environment} from '../../environments/environment';
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpEvent, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs/internal/Observable';
-import {Books} from '../pages/fileUpload/books';
-import {environment} from '../../environments/environment';
 
 @Injectable()
 export class UploadFile {

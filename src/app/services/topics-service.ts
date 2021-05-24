@@ -1,8 +1,9 @@
+
+import {TopicsDto} from '../pages/topics/topicsDto';
+import {environment} from '../../environments/environment';
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs/internal/Observable';
-import {TopicsDto} from '../pages/topics/topicsDto';
-import {environment} from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'

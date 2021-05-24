@@ -1,11 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from 'rxjs/internal/Observable';
 
-import {HttpEventType, HttpResponse} from '@angular/common/http';
 import {UploadFile} from '../../services/upload-file.service';
 import {Books} from './books';
 import {SimpleObject} from './SimpleObject';
-import {formatDate} from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs/internal/Observable';
+import {HttpEventType, HttpResponse} from '@angular/common/http';
 
 
 

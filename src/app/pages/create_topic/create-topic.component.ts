@@ -1,9 +1,10 @@
 import {TopicsDto} from '../topics/topicsDto';
 import {ActivatedRoute, Router} from '@angular/router';
 import {TopicsService} from '../../services/topics-service';
-import {Component, OnInit} from '@angular/core';
+
 import {SimpleObject} from '../fileUpload/SimpleObject';
 import {AuthenticationService} from '../../services/authentication.service';
+import {Component, OnInit} from '@angular/core';
 
 @Component({templateUrl: './create-topic.component.html'})
 export class CreateTopicComponent implements OnInit {

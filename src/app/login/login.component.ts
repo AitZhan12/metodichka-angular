@@ -1,10 +1,11 @@
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+
 import {ActivatedRoute, Router} from '@angular/router';
 import {AuthenticationService} from '../services/authentication.service';
-import {Component, OnInit} from '@angular/core';
-import {first} from 'rxjs/operators';
+
 import {User} from '../_models/User';
 import {UserService} from '../services/user.service';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({ templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit {
