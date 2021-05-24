@@ -2,13 +2,13 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpEvent, HttpRequest} from '@angular/common/http';
 import {Observable} from 'rxjs/internal/Observable';
 import {Books} from '../pages/fileUpload/books';
-import {environment} from '../../environments/environment.prod';
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class UploadFile {
 
   private baseUrl = 'http://localhost:8080/file';
-  rootUrl = environment.apiRootUrl + '/file';
+  rootUrl = environment.apiUrl + '/file';
   constructor(private http: HttpClient) {
   }
 
@@ -19,7 +19,7 @@ export class UploadFile {
     // formData.append('desc', desc);
     // formData.append('grade', grade.toString());
 
-    const req = new HttpRequest(`POST`, `${this.rootUrl}/upload`, formData, {
+    const req = new HttpRequest(`POST`, `${this.baseUrl}/upload`, formData, {
       reportProgress: true,
       responseType: 'json'
     } );

@@ -10,16 +10,16 @@ import {environment} from '../../environments/environment.prod';
 export class StemServiceService {
 
   private baseUrl = 'http://localhost:8080/stem';
-  apiRootUrl = environment.apiRootUrl + '/stem';
+  apiRootUrl = environment.apiUrl + '/stem';
   constructor(private http: HttpClient) {
   }
 
   getData(): Observable<string> {
-    return this.http.get(`${this.apiRootUrl}/getDesc`, {responseType: 'text'}
+    return this.http.get(`${this.baseUrl}/getDesc`, {responseType: 'text'}
       );
   }
 
   save(stem: StemDto) {
-    return this.http.post<StemDto>(`${this.apiRootUrl}/save`, stem);
+    return this.http.post<StemDto>(`${this.baseUrl}/save`, stem);
   }
 }

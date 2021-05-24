@@ -1,7 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:8080',
-  apiRootUrl: 'https://adisteme-back.herokuapp.com/',
+  apiUrl: 'http://adisteme.us-east-2.elasticbeanstalk.com',
   tokenPrefix: 'Bearer ',
   tokenKey: 'token'
 };
