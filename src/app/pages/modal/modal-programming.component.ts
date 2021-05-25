@@ -93,7 +93,7 @@ export class ModalProgrammingComponent implements OnInit {
 
   downloadPptx(id: number) {
     this.topicService.downloadPptx(this.data.category, id).subscribe(data => {
-      const blob = new Blob([data], {type: 'application/pptx'});
+      const blob = new Blob([data], {type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'});
       const url = window.URL.createObjectURL(blob);
       window.open(url);
     });
